@@ -3,7 +3,7 @@ import path from "path";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: "AIzaSyAxSR_hf9QmX9kwR4p6Fibwa1IAMHifmJg" });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "AIzaSyCKzcMZcifQj5CA37zlzoCTCz2ksqxH42M" });
 
 async function startServer() {
   const app = express();
